@@ -1,6 +1,6 @@
 #Awesome Latex
 
-A curated list of awesome Python frameworks, libraries and software. Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
+A curated list of awesome Latex templates, libraries and tutorials. Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 - [Awesome Latex](#awesome-latex)
   - [Conference Templates](#conference-templates)
