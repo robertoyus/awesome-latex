@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+
+\usepackage{fancyvrb}   % better verbatim package
+
+
+\usepackage{soul,color}
+
+\usepackage[usenames,dvipsnames]{xcolor}
+
+\newcommand{\hlc}[2][yellow]{ {\sethlcolor{#1} \hl{#2}} }
+\newcommand{\hlroberto}[1]{ {\sethlcolor{SkyBlue} \hl{#1}} }
+\newcommand{\hlprimal}[1]{ {\sethlcolor{Dandelion} \hl{#1}} }
+
+
+\begin{document}
+
+\section*{Highlighting text}
+
+\noindent These are some examples for highlighting text.
+
+
+
+
+\subsection*{Simple yellow highlight}
+
+If you just want to highlight text using yellow you can directly use the $hl$ package.
+
+\noindent Usage:
+
+\begin{Verbatim}[frame=single,framesep=0.125in,fontsize=\footnotesize]
+\usepackage{soul,color}
+
+----------------
+
+This is \hl{an example}
+\end{Verbatim}
+
+\noindent Example:
+
+This is \hl{an example}
+
+\noindent Comments:
+
+To highlight references and cites use:
+
+\begin{Verbatim}[frame=single,framesep=0.125in,fontsize=\footnotesize]
+This is \hl{an example with reference {\ref{fig:?}}}
+\end{Verbatim}
+
+This is \hl{an example with reference~{\ref{fig:?}}}
+
+
+
+
+\subsection*{Highlighting text with different colors}
+
+Highlighting text using different colors is especially useful when different authors want to leave comments on a document.
+
+\noindent Usage:
+
+\begin{Verbatim}[frame=single,framesep=0.125in,fontsize=\footnotesize]
+\usepackage{soul}
+\usepackage[usenames,dvipsnames]{xcolor}
+\newcommand{\hlc}[2][yellow]{ {\sethlcolor{#1} \hl{#2}} }
+	
+----------------
+	
+This is \hlc[green]{an example} using different \hlc[Dandelion]{colors}.
+\end{Verbatim}
+
+\noindent Example:
+
+This is \hlc[green]{an example} using different \hlc[Dandelion]{colors}.
+
+
+\noindent Comments:
+
+You can also define a different color for each different author:
+
+\begin{Verbatim}[frame=single,framesep=0.125in,fontsize=\footnotesize]
+\usepackage{soul}
+\usepackage[usenames,dvipsnames]{xcolor}
+\newcommand{\hlroberto}[1]{ {\sethlcolor{SkyBlue} \hl{#1}} }
+\newcommand{\hlprimal}[1]{ {\sethlcolor{Dandelion} \hl{#1}} }
+	
+----------------
+	
+This is \hlroberto{an example} using different colors for different
+\hlprimal{authors}.
+\end{Verbatim}
+
+This is \hlroberto{an example} using different colors for different \hlprimal{authors}.
+
+
+
+
+\end{document}
